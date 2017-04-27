@@ -1,4 +1,4 @@
-var res= 
+var arrObj= 
 [
   {
     "userId": 1,
@@ -1202,32 +1202,14 @@ var res=
   }
 ]
 
-var res = res.forEach(function(element){
-  document.write("<div>" + element.title + "</div>")
-});
+function sumarTarea(){
 
+  var otraTarea = document.getElementById("tareaInput").value;
+  var sumar = document.getElementsByClassName("add");
 
-/*function sumarTarea(){
-  var info = document.getElementById('nuevaTarea');
-  var enlaces = document.getElementsByTagName('a')
-  var parrafos = document.getElementsByTagName('p');
-
-  var contador = 0;
-  for (var i = 0; i < res.length; i++){
-    if(res[i] <= 9){
-    contador++; //contador = contador + i
-    }
-  }
-  info.innerHTML = 'El total de enlaces es: <span class="resultado">' + res.length + '<br> Los enlaces que llevan a Laboratoria son: '+ contador;
+  sumar[0].innerHTML += "<li>" + otraTarea + "</li>";
 }
- 
-function obtenerEnlace(){
 
-	var enlace = document.getElementsByClassName("title");
-
-	enlace[0].innerHTML += input.value +"<br>";
-
-	input.value = "";
-}*/
-
- 
+var arrObj = arrObj.forEach(function(element){
+ +  document.write("<div>" + element.title + "</div>")
+ });

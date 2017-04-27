@@ -1,27 +1,26 @@
 
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8"/>
-	<title>Lista de tareas</title>
+	<meta charset="UTF-8">
+	<title>Proyecto Sprint-Lista de tareas</title>
 </head>
 <body>
-<section class="box">
-			<div class="container">
-				<div class="row ">
-					<div class="col m12" id="informacion">
-						<h1 class="title">Lista de tareas</h1>
-						
-					</div>
-				</div>
-				<div class="row">
-					<div class="col m12 botoncillo">
-						<button onclick="sumarTarea()">Añadir tarea</button>
-					</div>
-				</div>
-				<div id="nuevaTarea"></div>
-			</div>
-		</section>
-<script type="text/javascript" src="assets/js/javascript.js"></script>
+	<h1>Lista de Tareas</h1>
+		<form class="lista" action="">
+				<input type="text" id="tareaInput" placeholder="Añadir tarea">
+				<button id="agregarTarea" type="submit" onclick="sumarTarea(); return false">Agregar tarea</button>
+		</form>
+	</div>
+	<div>
+		<ul id="nuevo">
+		</ul>
+	</div>
+	<div id="sumar" >
+	<ul class="add"></ul>
+	</div>
+	<script src="assets/js/javascript.js"></script>
 </body>
 </html>
+
+
