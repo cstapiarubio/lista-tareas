@@ -1210,6 +1210,7 @@ function sumarTarea(){
   sumar[0].innerHTML += "<li>" + otraTarea + "</li>";
 }
 
-var arrObj = arrObj.forEach(function(element){
- +  document.write("<div>" + element.title + "</div>")
- });
+
+arrObj.forEach(function(elemento){
+	document.getElementById("mostrar").innerHTML+="<ul><li>"+elemento.title+"</li></ul>";
+});
