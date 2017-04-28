@@ -1,3 +1,4 @@
+var arr=[];
 var arrObj= 
 [
   {
@@ -1203,14 +1204,28 @@ var arrObj=
 ]
 
 function sumarTarea(){
-
   var otraTarea = document.getElementById("tareaInput").value;
   var sumar = document.getElementsByClassName("add");
-
+  var newObject = new arr(1,(arrObj.length+1), otraTarea, false);
+  arrObj.push(newObject);
+  document.getElementById('lista').innerHTML += '<li><input type="checkbox" name="tarea" value="' + (arrObj.length+1) + '">' + otraTarea + "</li>"; //Checkbox para las nuevas tareas añadidas sin el shulito porque son false por default
+  document.getElementById('tareaInput').value = ""; // Las "" despues del igual hacen que despues de las tareas ingresadas vuelva a quedar la cajita vacia
   sumar[0].innerHTML += "<li>" + otraTarea + "</li>";
 }
 
 
-arrObj.forEach(function(elemento){
+function arr(userId,id,title, completed){ 
+    this.userId = userId;
+    this.id = id;
+    this.title = title;
+    this.completed=completed;
+}
+
+
+arrObj.slice(0,10).forEach(function(elemento){
 	document.getElementById("mostrar").innerHTML+="<ul><li>"+elemento.title+"</li></ul>";
 });
+
+
+
+
